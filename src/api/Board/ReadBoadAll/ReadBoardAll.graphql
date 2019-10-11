@@ -1,0 +1,9 @@
+type ReadBoardAllResponse {
+    ok: Boolean!
+    error: String
+    board: [Board]
+}
+
+type Query {
+    ReadBoardAll: ReadBoardAllResponse!
+}

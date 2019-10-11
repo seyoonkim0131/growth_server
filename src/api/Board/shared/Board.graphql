@@ -1,0 +1,10 @@
+type Board {
+    no: Int!
+    title: String!
+    body: String
+    file: String
+    createId: String!
+    createDate: String!
+    updateId: String!
+    updateDate: String!
+}

@@ -1,1 +1,1 @@
-# growth_server
+# Cultilabs Board Server

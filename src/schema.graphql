@@ -1,0 +1,44 @@
+type ReadBoardAllResponse {
+  ok: Boolean!
+  error: String
+  board: [Board]
+}
+
+type Query {
+  ReadBoardAll: ReadBoardAllResponse!
+  ReadBoardOne(no: Int!): ReadBoardOneResponse!
+}
+
+type ReadBoardOneResponse {
+  ok: Boolean!
+  error: String
+  board: Board
+}
+
+type Board {
+  no: Int!
+  title: String!
+  body: String
+  file: String
+  createId: String!
+  createDate: String!
+  updateId: String!
+  updateDate: String!
+}
+
+type User {
+  no: Int!
+  id: String!
+  name: String!
+  password: String
+}
+
+type SignInResponse {
+  ok: Boolean!
+  error: String
+  token: String
+}
+
+type Mutation {
+  SignIn(id: String!, password: String!): SignInResponse!
+}
