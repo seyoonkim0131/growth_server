@@ -1,3 +1,14 @@
+type CreateBoardResponse {
+  ok: Boolean!
+  error: String
+  token: String
+}
+
+type Mutation {
+  CreateBoard(title: String!, body: String!, file: String!, createId: String!, updateId: String!): CreateBoardResponse!
+  SignIn(id: String!, password: String!): SignInResponse!
+}
+
 type ReadBoardAllResponse {
   ok: Boolean!
   error: String
@@ -37,8 +48,4 @@ type SignInResponse {
   ok: Boolean!
   error: String
   token: String
-}
-
-type Mutation {
-  SignIn(id: String!, password: String!): SignInResponse!
 }

@@ -1,0 +1,9 @@
+type CreateBoardResponse {
+    ok: Boolean!
+    error: String
+    token: String
+}
+
+type Mutation {
+    CreateBoard(title: String!, body: String!, file: String!, createId: String!, updateId: String!) : CreateBoardResponse!
+}
